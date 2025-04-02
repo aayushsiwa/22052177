@@ -4,8 +4,9 @@ import api from '../api/api';
 
 const TopUsers = () => {
   interface User {
-    id: string;
-    // Add other properties of the user object if needed
+    id: number;
+    username: string;
+    postCount: number;
   }
 
   const [users, setUsers] = useState<User[]>([]);

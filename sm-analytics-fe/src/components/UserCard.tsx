@@ -1,6 +1,13 @@
 import React from 'react';
 
-const UserCard = ({ user, rank }) => {
+interface User {
+  id: number;
+  username: string;
+  postCount: number;
+  followers?: number;
+}
+
+const UserCard: React.FC<{ user: User; rank?: number }> = ({ user, rank }) => {
   // Generate a random avatar from a consistent seed (user id)
   const avatarUrl = `https://i.pravatar.cc/150?img=${user.id % 70 || rank}`;
 

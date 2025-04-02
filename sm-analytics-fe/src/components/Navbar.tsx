@@ -1,12 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
-
 const Navbar = () => {
   const location = useLocation();
-  
-  const isActive = (path) => {
+  const isActive = (path: string): boolean => {
     return location.pathname === path;
   };
-
   return (
     <nav className="bg-blue-600 shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
